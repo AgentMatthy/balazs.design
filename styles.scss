@@ -1,0 +1,70 @@
+$c-bg: #000;
+$c-txt: #f6f5f4;
+$c-acc: #a47e1b;
+$c-dis: #ababab;
+
+$darkify: rgba(0, 0, 0, 0.1);
+$litify: rgba(255, 255, 255, 0.2);
+
+* {
+    box-sizing: border-box;
+    font-family: Teachers, serif;
+}
+
+body {
+    background-color: $c-bg;
+    color: $c-txt;
+    padding: 0; margin: 0;
+
+    font-size: 2rem;
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    padding: 5px 10vw;
+
+    ul {
+        display: flex;
+        gap: 5vw;
+        list-style: none;
+
+        li {
+            color: $c-txt;
+        }
+    }
+
+    a {
+        color: $c-txt;
+        text-decoration: none;
+    }
+
+    background-color: $darkify;
+    backdrop-filter: blur(10px);
+}
+
+main {
+    padding: 0 10vw; margin: 0;    
+
+    .screen1 {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            margin: 0;
+            font-size: 10rem;
+        }
+
+        h3 {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  font-family: Teachers, serif;
+}
+
+body {
+  background-color: #000;
+  color: #f6f5f4;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  padding: 5px 10vw;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+nav ul {
+  display: flex;
+  gap: 5vw;
+  list-style: none;
+}
+nav ul li {
+  color: #f6f5f4;
+}
+nav a {
+  color: #f6f5f4;
+  text-decoration: none;
+}
+
+main {
+  padding: 0 10vw;
+  margin: 0;
+}
+main .screen1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .screen1 h1 {
+  margin: 0;
+  font-size: 10rem;
+}
+main .screen1 h3 {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */
