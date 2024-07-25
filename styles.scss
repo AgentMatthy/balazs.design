@@ -1,6 +1,6 @@
 $c-bg: #000;
 $c-txt: #f6f5f4;
-$c-acc: #a47e1b;
+$c-acc: #9046CF;
 $c-dis: #ababab;
 
 $c-g1: #a47e1b;
@@ -28,6 +28,38 @@ body {
     padding: 0; margin: 0;
 
     font-size: 2rem;
+}
+
+.loadscreen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    z-index: 100;
+
+    pointer-events: none;
+
+    h1 {
+        color: $c-txt;
+        font-size: 40vw;
+        font-weight: 800;
+        margin: 0;
+        position: absolute;
+        top: 50%; left: 50%;
+        translate: -45% -50%;
+        letter-spacing: 5rem;
+
+        text-align: center;
+
+        background-image:
+            url("./textures/nnnoise.svg"),
+            linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+        background-blend-mode: soft-light;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        animation: load 3s cubic-bezier(1, 0, 1, 0) both;
+    }
 }
 
 nav {
@@ -109,8 +141,6 @@ main {
 
             opacity: 0;
 
-            animation-delay: .2s;
-
             background-image:
                 url("./textures/nnnoise.svg"),
                 linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
@@ -124,6 +154,8 @@ main {
         h3 {
             margin: 0;
             font-weight: 400;
+
+            color: $c-txt;
         }
     }
 
@@ -149,6 +181,14 @@ main {
                 margin: 0;
 
                 text-align: center;
+
+                background-image:
+                    url("./textures/nnnoise.svg"),
+                    linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+                background-blend-mode: soft-light;
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
             p {
@@ -318,6 +358,14 @@ footer {
     animation-delay: 3s;
 }
 
+.anim-delay-4 {
+    animation-delay: 4s;
+}
+
+.anim-delay-5 {
+    animation-delay: 5s;
+}
+
 // KEYFRAMES //
 
 @keyframes fadeup {
@@ -362,6 +410,24 @@ footer {
 @keyframes fadeout {
     from {
         opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes load {
+    from {
+        opacity: 1;
+        scale: 1;
+    }
+    25% {
+        opacity: 1;
+        scale: 1;
+    }
+    99% {
+        opacity: 1;
+        scale: 80;
     }
     to {
         opacity: 0;

@@ -11,8 +11,12 @@
 </head>
 
 <body>
+
+    <div class="loadscreen">
+        <h1>BD</h1>
+    </div>
     
-    <nav class="fadein anim-delay-2">
+    <nav class="fadein anim-delay-5">
         <!-- logo -->
         <h2>BD</h2>
 
@@ -27,8 +31,8 @@
     <main>
         <!-- screen main -->
         <div class="screen1">
-            <h1 class="spacein">Balazs Design</h2>
-            <h3 class="disabled fadeup anim-delay-1">Simplifying enterprise aesthetics</h1>
+            <h1 class="spacein anim-delay-3">Balazs Design</h2>
+            <h3 class="fadeup anim-delay-4">Simplifying enterprise aesthetics</h1>
         </div>
 
         <div class="separator" id="about">
@@ -96,9 +100,9 @@
             <p data-animation="fadein">We would love to hear from you.</p>
             <div>
                 <a href=""><button>Instagram</button></a>
-                <a href=""><button>Email</button></a>
-                <a href=""><button>LinkedIn</button></a>
                 <a href=""><button>Facebook</button></a>
+                <a href=""><button>Youtube</button></a>
+                <a href=""><button>Twitter</button></a>
             </div>
         </div>
 
@@ -112,6 +116,31 @@
         </div>
     </footer>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCqnOTd3wxjeraHiDEj1-dKqBgGeZuTGwM",
+          authDomain: "balazs-design.firebaseapp.com",
+          databaseURL: "https://balazs-design-default-rtdb.europe-west1.firebasedatabase.app",
+          projectId: "balazs-design",
+          storageBucket: "balazs-design.appspot.com",
+          messagingSenderId: "346060636109",
+          appId: "1:346060636109:web:e81d0332a723b0bd9ace84",
+          measurementId: "G-H46QSWWPQ5"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
+    
     <script src="script.js" type="text/JavaScript"></script>
 </body>
 
