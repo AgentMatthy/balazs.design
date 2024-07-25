@@ -3,6 +3,11 @@
   font-family: Teachers, serif;
 }
 
+html {
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #000;
   color: #f6f5f4;
@@ -50,8 +55,35 @@ main .screen1 {
 }
 main .screen1 h1 {
   margin: 0;
-  font-size: 10rem;
+  font-size: clamp(5rem, 10vw, 10rem);
+  font-weight: 400;
+  text-align: center;
+  background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
+  background-blend-mode: soft-light;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main .screen1 h3 {
   margin: 0;
+}
+
+.separator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.separator div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.separator div span {
+  width: 100%;
+  height: 1px;
+  background-color: #a47e1b;
+}
+
+.disabled {
+  color: #ababab;
 }/*# sourceMappingURL=styles.css.map */
