@@ -25,9 +25,10 @@ nav {
   width: 100vw;
   height: 15vh;
   padding: 5px 10vw;
+  z-index: 10;
   background-color: rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
 }
 nav ul {
   display: flex;
@@ -77,8 +78,10 @@ main .screen1 {
 main .screen1 h1 {
   margin: 0;
   font-size: clamp(5rem, 10vw, 10rem);
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
+  text-wrap: nowrap;
+  overflow: hidden;
   background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
   background-blend-mode: soft-light;
   -webkit-background-clip: text;
@@ -86,12 +89,38 @@ main .screen1 h1 {
 }
 main .screen1 h3 {
   margin: 0;
+  font-weight: 400;
+}
+main .screen2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 9rem;
+}
+main .screen2 div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  text-wrap: normal;
+}
+main .screen2 div h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+}
+main .screen2 div p {
+  margin: 3rem 0;
+  width: 100%;
+  text-align: justify;
 }
 
 .separator {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10vh 0;
 }
 .separator div {
   flex: 1;
@@ -108,4 +137,57 @@ main .screen1 h3 {
 
 .disabled {
   color: #ababab;
+}
+
+.fadeup {
+  animation: fadeup 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.spacein {
+  animation: spacein 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.fadein {
+  animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.anim-delay-1 {
+  animation-delay: 1s;
+}
+
+.anim-delay-2 {
+  animation-delay: 2s;
+}
+
+.anim-delay-3 {
+  animation-delay: 3s;
+}
+
+@keyframes fadeup {
+  from {
+    opacity: 0;
+    translate: 0 5vh;
+  }
+  to {
+    opacity: 1;
+    translate: 0;
+  }
+}
+@keyframes spacein {
+  from {
+    opacity: 0;
+    letter-spacing: 2.2rem;
+  }
+  to {
+    opacity: 1;
+    letter-spacing: 0.2rem;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
 }/*# sourceMappingURL=styles.css.map */
