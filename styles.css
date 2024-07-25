@@ -36,6 +36,27 @@ nav ul {
 }
 nav ul li {
   color: #f6f5f4;
+  position: relative;
+}
+nav ul li::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: #a47e1b;
+  transition: all 0.2s ease-out;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  opacity: 0;
+  filter: blur(5px);
+}
+nav ul li:hover::after {
+  translate: 0 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  filter: blur(0);
 }
 nav a {
   color: #f6f5f4;
@@ -77,6 +98,7 @@ main .screen1 h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
 }
 .separator div span {
   width: 100%;
