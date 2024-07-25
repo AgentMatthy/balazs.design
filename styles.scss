@@ -97,6 +97,7 @@ main {
 
         h1 {
             -webkit-transform: translateZ(0);
+            transform: translateZ(0);
 
             margin: 0;
             font-size: clamp(5rem, 10vw, 10rem);
@@ -115,6 +116,7 @@ main {
                 linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
             background-blend-mode: soft-light;
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
 
         }
