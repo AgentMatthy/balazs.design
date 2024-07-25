@@ -159,6 +159,71 @@ main {
             }
         }
     }
+
+    .screen3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        h2 {
+            font-size: 6rem;
+            font-weight: 600;
+
+            margin: 0; padding: 0;
+
+            background-image:
+                url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            margin: 0 0 10vh; padding: 0;
+        }
+
+        div {
+            padding: 0 10vw;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5vh 5vw;
+
+            button {
+
+                background:
+                    url("./textures/nnnoise.svg"),
+                    linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+                background-blend-mode: soft-light;
+
+                color: $c-txt;
+                font-size: 2rem;
+                padding: 1rem 4rem;
+                border: none;
+                border-radius: 32rem;
+                cursor: pointer;
+
+                grid-row: 1;
+                width: 100%;
+
+                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+
+                outline: transparent 25px solid;
+                outline-offset: -25px;
+                color: $c-bg;
+
+                &:hover {
+                    background: $c-bg;
+                    outline: $c-acc 5px solid;
+                    outline-offset: 5px;
+                    color: $c-acc;
+                }
+            }
+        }
+    }
 }
 
 footer {

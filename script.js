@@ -1,16 +1,27 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      // When the element is visible
+      // Check if the element is visible
       if (entry.isIntersecting) {
-        // Add the animation class to the element
-        entry.target.classList.add('fadeup');
+        // Get the animation class from the data attribute
+        const animationClass = entry.target.dataset.animation;
+        
+        // Add the specified animation class to the element
+        if (animationClass) {
+          entry.target.classList.add(animationClass);
+        } else {
+          console.warn('No animation class specified for', entry.target);
+        }
+  
+        // Stop observing the target once the animation has started
+        observer.unobserve(entry.target);
       }
     });
   });
   
   // Select the elements you want to observe
-  const animatedElements = document.querySelectorAll('.aov');
+  const animatedElements = document.querySelectorAll('[data-animation]');
   animatedElements.forEach(element => {
     observer.observe(element);
   });
+  
   
