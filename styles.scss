@@ -96,6 +96,8 @@ main {
         align-items: center;
 
         h1 {
+            -webkit-transform: translateZ(0);
+
             margin: 0;
             font-size: clamp(5rem, 10vw, 10rem);
             font-weight: 600;
@@ -103,6 +105,10 @@ main {
             text-align: center;
             text-wrap: nowrap;
             overflow: hidden;
+
+            opacity: 0;
+
+            animation-delay: .2s;
 
             background-image:
                 url("./textures/nnnoise.svg"),
@@ -153,6 +159,28 @@ main {
     }
 }
 
+footer {
+
+    div {
+        color: $c-bg;
+
+        padding: 50vh 10vw 5vh;
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: url("./textures/sssurf.svg");
+        background-size: cover;
+
+        width: 100vw;
+        left: 0; bottom: 0;
+    }
+    
+    overflow: hidden;
+}
+
 .separator {
     display: flex;
     justify-content: space-between;
@@ -182,18 +210,34 @@ main {
 // ANIMATIONS //
 
 .fadeup {
-    animation: fadeup 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation: fadeup 0.6s cubic-bezier(0.3, 0.8, 0.7, 1) both;
 }
 
 .spacein {
-    animation: spacein 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation: spacein 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
 }
 
 .fadein {
+    animation: fadein 1.5s cubic-bezier(0.19, 1, 0.22, 1) both;
+}
+
+.fadeout {
     animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 
+.separator-left {
+    animation: separator-left 1s cubic-bezier(0.19, 0.8, 0.22, 1) both forwards;
+}
+
+.separator-right {
+    animation: separator-right 1s cubic-bezier(0.19, 0.8, 0.22, 1) both forwards;
+}
+
 // DELAYS //
+
+.anim-delay-02 {
+    animation-delay: 0.2s;
+}
 
 .anim-delay-1 {
     animation-delay: 1s;
@@ -225,10 +269,14 @@ main {
     from {
         opacity: 0;
         letter-spacing: calc($title-letter-spacing + 2rem);
+        filter: blur(2px);
+        // transform: scaleX(1);
     }
     to {
         opacity: 1;
         letter-spacing: $title-letter-spacing;
+        filter: blur(0);
+        /// transform: scaleX(1);
     }
 }
 
@@ -236,7 +284,19 @@ main {
     from {
         opacity: 0;
     }
+    20% {
+        opacity: 0;
+    }
     to {
         opacity: 100%;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
     }
 }
