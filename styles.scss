@@ -10,7 +10,7 @@ $c-g3: #9e7714;
 $darkify: rgba(0, 0, 0, 0.1);
 $litify: rgba(255, 255, 255, 0.2);
 
-$title-letter-spacing: .2rem;
+$title-letter-spacing: 0.2rem;
 
 * {
     box-sizing: border-box;
@@ -25,15 +25,18 @@ html {
 body {
     background-color: $c-bg;
     color: $c-txt;
-    padding: 0; margin: 0;
+    padding: 0;
+    margin: 0;
 
     font-size: 2rem;
 }
 
 .loadscreen {
     position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     z-index: 100;
 
     pointer-events: none;
@@ -44,14 +47,14 @@ body {
         font-weight: 800;
         margin: 0;
         position: absolute;
-        top: 50%; left: 50%;
+        top: 50%;
+        left: 50%;
         translate: -45% -50%;
         letter-spacing: 5rem;
 
         text-align: center;
 
-        background-image:
-            url("./textures/nnnoise.svg"),
+        background-image: url("./textures/nnnoise.svg"),
             linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
         background-blend-mode: soft-light;
         -webkit-background-clip: text;
@@ -79,7 +82,6 @@ nav {
         gap: 5vw;
         list-style: none;
 
-        
         li {
             color: $c-txt;
             position: relative;
@@ -91,16 +93,17 @@ nav {
                 background-color: $c-acc;
                 transition: all 0.2s ease-out;
 
-                bottom: -10px; left: 50%;
+                bottom: -10px;
+                left: 50%;
                 width: 0;
                 opacity: 0;
                 filter: blur(5px);
-
             }
 
             &:hover::after {
                 translate: 0 0;
-                bottom: 0; left: 0;
+                bottom: 0;
+                left: 0;
                 width: 100%;
                 opacity: 1;
                 filter: blur(0);
@@ -115,10 +118,14 @@ nav {
 
     background-color: $darkify;
     backdrop-filter: blur(20px);
+
+    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent);
+    mask-image: linear-gradient(to bottom, black 40%, transparent);
 }
 
 main {
-    padding: 0 10vw; margin: 0;    
+    padding: 0 10vw;
+    margin: 0;
 
     .screen1 {
         height: 100vh;
@@ -141,14 +148,12 @@ main {
 
             opacity: 0;
 
-            background-image:
-                url("./textures/nnnoise.svg"),
+            background-image: url("./textures/nnnoise.svg"),
                 linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
             background-blend-mode: soft-light;
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-
         }
 
         h3 {
@@ -182,8 +187,7 @@ main {
 
                 text-align: center;
 
-                background-image:
-                    url("./textures/nnnoise.svg"),
+                background-image: url("./textures/nnnoise.svg"),
                     linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
                 background-blend-mode: soft-light;
                 -webkit-background-clip: text;
@@ -210,10 +214,10 @@ main {
             font-size: 6rem;
             font-weight: 600;
 
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
 
-            background-image:
-                url("./textures/nnnoise.svg"),
+            background-image: url("./textures/nnnoise.svg"),
                 linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
             background-blend-mode: soft-light;
             -webkit-background-clip: text;
@@ -222,7 +226,8 @@ main {
         }
 
         p {
-            margin: 0 0 10vh; padding: 0;
+            margin: 0 0 10vh;
+            padding: 0;
         }
 
         div {
@@ -233,9 +238,7 @@ main {
             gap: 5vh 5vw;
 
             button {
-
-                background:
-                    url("./textures/nnnoise.svg"),
+                background: url("./textures/nnnoise.svg"),
                     linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
                 background-blend-mode: soft-light;
 
@@ -267,7 +270,6 @@ main {
 }
 
 footer {
-
     div {
         color: $c-bg;
 
@@ -282,10 +284,11 @@ footer {
         background-size: cover;
 
         width: 100vw;
-        left: 0; bottom: 0;
+        left: 0;
+        bottom: 0;
     }
-    
-    overflow: hidden;
+
+    overflow-x: hidden;
 }
 
 .separator {
