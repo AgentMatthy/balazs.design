@@ -6,7 +6,7 @@
     <title>Balazs Dessign</title>
 
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teachers">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Teachers|Jacquarda+Bastarda+9|Tangerine|Whisper|Great+Vibes">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -15,7 +15,7 @@
     <div class="loadscreen">
         <h1>BD</h1>
     </div>
-    
+
     <nav class="fadein anim-delay-5">
         <!-- logo -->
         <h2>BD</h2>
@@ -31,7 +31,7 @@
     <main>
         <!-- screen main -->
         <div class="screen1">
-            <h1 class="spacein anim-delay-3">Balazs Design</h2>
+            <h1 class="spacein anim-delay-3">BallaB Design</h2>
             <h3 class="fadeup anim-delay-4">Simplifying enterprise aesthetics</h1>
         </div>
 
@@ -55,8 +55,8 @@
                 <h3 class="" data-animation="fadeup">Streamline Your Vision. <br>
                     Amplify Your Impact.</h3>
                 <p class="" data-animation="fadein">
-                    In today's dynamic landscape, a brand is more than a logo – 
-                    it's a visual narrative that shapes perception and propels growth. 
+                    In today's dynamic landscape, a brand is more than a logo –
+                    it's a visual narrative that shapes perception and propels growth.
                     At Balazs Design, we don't just create aesthetics, we craft strategic experiences.
                 </p>
             </div>
@@ -64,8 +64,8 @@
             <div>
                 <h3 class="" data-animation="fadeup">A Symphony of Design Services.</h3>
                 <p class="" data-animation="fadein">
-                    From captivating video edits to meticulously crafted logos, 
-                    our comprehensive suite of services caters to every facet of your brand identity. 
+                    From captivating video edits to meticulously crafted logos,
+                    our comprehensive suite of services caters to every facet of your brand identity.
                     We curate color palettes that resonate, designs that inspire, and a voice that captivates.
                 </p>
             </div>
@@ -73,10 +73,45 @@
             <div>
                 <h3 class="" data-animation="fadeup">Simplifying Enterprise Aesthetics.</h3>
                 <p class="" data-animation="fadein">
-                    Let us streamline the design process, transforming your vision into a masterpiece. 
-                    We collaborate seamlessly, ensuring clear communication and exceptional results. 
+                    Let us streamline the design process, transforming your vision into a masterpiece.
+                    We collaborate seamlessly, ensuring clear communication and exceptional results.
                     With Balazs Design, elevate your enterprise aesthetic and unlock its true potential.
                 </p>
+            </div>
+        </div>
+
+        <div class="separator" id="pricing">
+            <div>
+                <span></span>
+            </div>
+            <div>
+                <img src="./icons/nav-arrow-right.svg">
+                <h3>Pricing</h3>
+                <img src="./icons/nav-arrow-left.svg">
+            </div>
+            <div>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- screen pricing -->
+        <div class="screen3" id="pricing">
+            <div class="cards">
+                <div class="card">
+                    <h5>Logo design</h5>
+                    <p>Custom handcrafted logo, in multiple versions, for many usecases.</p>
+                    <p>Starting at <span class="golden">$80</span></p>
+                </div>
+                <div class="card">
+                    <h5>Brand design</h5>
+                    <p>Custom handcrafted logo, in multiple versions, for many usecases.</p>
+                    <p>Starting at <span class="golden">$80</span></p>
+                </div>
+                <div class="card">
+                    <h5>Cover design</h5>
+                    <p>Custom handcrafted logo, in multiple versions, for many usecases.</p>
+                    <p>Starting at <span class="golden">$80</span></p>
+                </div>
             </div>
         </div>
 
@@ -122,7 +157,7 @@
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
         // TODO: Add SDKs for Firebase products that you want to use
         // https://firebase.google.com/docs/web/setup#available-libraries
-      
+
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         const firebaseConfig = {
@@ -135,12 +170,12 @@
           appId: "1:346060636109:web:e81d0332a723b0bd9ace84",
           measurementId: "G-H46QSWWPQ5"
         };
-      
+
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
     </script>
-    
+
     <script src="script.js" type="text/JavaScript"></script>
 </body>
 

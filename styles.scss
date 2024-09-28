@@ -139,8 +139,11 @@ main {
             transform: translateZ(0);
 
             margin: 0;
+            padding: 0 20px;
             font-size: clamp(5rem, 10vw, 10rem);
             font-weight: 600;
+
+            font-family: "Great Vibes", serif;
 
             text-align: center;
             text-wrap: nowrap;
@@ -204,6 +207,75 @@ main {
         }
     }
 
+    .screen3 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h3 {
+            font-size: 4rem;
+            font-weight: 600;
+
+            margin: 0;
+
+            text-align: center;
+
+            background-image: url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 5vw;
+
+            padding: 5vh 0;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+
+                flex-wrap: wrap;
+
+                gap: 2rem;
+
+                border-radius: 15px;
+                outline: $c-dis solid 2px;
+                padding: 2vw;
+
+                h5 {
+                    background-image: url("./textures/nnnoise.svg"),
+                        linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+                    background-blend-mode: soft-light;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+
+                    font-family: "Great Vibes", serif;
+                    font-size: 3rem;
+
+                    text-wrap: nowrap;
+
+                    padding: 0;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
     .screen4 {
         display: flex;
         flex-direction: column;
@@ -216,6 +288,8 @@ main {
 
             margin: 0;
             padding: 0;
+
+            font-family: "Great Vibes", serif;
 
             background-image: url("./textures/nnnoise.svg"),
                 linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
