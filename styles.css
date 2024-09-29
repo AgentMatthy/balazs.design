@@ -173,15 +173,16 @@ main .screen3 h3 {
   -webkit-text-fill-color: transparent;
 }
 main .screen3 .cards {
-  display: flex;
-  justify-content: center;
+  display: grid;
   gap: 5vw;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  position: relative;
   padding: 5vh 0;
 }
 main .screen3 .cards .card {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 2rem;
   border-radius: 15px;
   outline: #ababab solid 2px;
@@ -231,12 +232,16 @@ main .screen4 p {
 main .screen4 div {
   padding: 0 10vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
   gap: 5vh 5vw;
 }
 main .screen4 div button {
   background: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
   background-blend-mode: soft-light;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   color: #f6f5f4;
   font-size: 2rem;
   padding: 1rem 4rem;

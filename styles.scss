@@ -229,17 +229,19 @@ main {
         }
 
         .cards {
-            display: flex;
-            justify-content: center;
+            display: grid;
             gap: 5vw;
+
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: auto;
+
+            position: relative;
 
             padding: 5vh 0;
 
             .card {
                 display: flex;
                 flex-direction: column;
-
-                flex-wrap: wrap;
 
                 gap: 2rem;
 
@@ -308,13 +310,18 @@ main {
             padding: 0 10vw;
 
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-rows: auto;
             gap: 5vh 5vw;
 
             button {
                 background: url("./textures/nnnoise.svg"),
                     linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
                 background-blend-mode: soft-light;
+
+                align-items: center;
+                text-align: center;
+                justify-content: center;
 
                 color: $c-txt;
                 font-size: 2rem;
@@ -390,6 +397,8 @@ footer {
 .disabled {
     color: $c-dis;
 }
+
+// MOBILE //
 
 // ANIMATIONS //
 
