@@ -151,6 +151,20 @@ nav {
     mask-image: linear-gradient(to bottom, black 33%, transparent);
 }
 
+.toppixel {
+    position: fixed;
+
+    z-index: 4;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 1px;
+
+    background-color: black;
+}
+
 main {
     padding: 0 10vw;
     margin: 0;
@@ -429,6 +443,12 @@ footer {
 }
 
 // MOBILE //
+
+@media only screen and (max-width: 600px) {
+    main {
+        background-color: lightblue;
+    }
+}
 
 // ANIMATIONS //
 
