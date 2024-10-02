@@ -24,6 +24,8 @@ body {
   height: 100vh;
   z-index: 100;
   pointer-events: none;
+  background: black;
+  animation: fadeout 2s 1s cubic-bezier(1, 0, 1, 0) both;
 }
 .loadscreen h1 {
   color: #f6f5f4;
@@ -54,12 +56,13 @@ nav {
   height: 15vh;
   padding: 5px 10vw;
   z-index: 10;
-  background-color: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent);
-  mask-image: linear-gradient(to bottom, black 40%, transparent);
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+  mask-image: linear-gradient(to bottom, black 60%, transparent);
 }
 nav h2 {
+  z-index: 10;
   font-family: "Great Vibes", serif;
   font-size: 2.5rem;
 }
@@ -95,6 +98,19 @@ nav ul li:hover::after {
 nav a {
   color: #f6f5f4;
   text-decoration: none;
+}
+
+.blurtop {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 15vh;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  -webkit-mask-image: linear-gradient(to bottom, black 33%, transparent);
+  mask-image: linear-gradient(to bottom, black 33%, transparent);
 }
 
 main {

@@ -41,6 +41,10 @@ body {
 
     pointer-events: none;
 
+    background: black;
+
+    animation: fadeout 2s 1s cubic-bezier(1, 0, 1, 0) both;
+
     h1 {
         color: $c-txt;
         font-size: 40vw;
@@ -78,6 +82,7 @@ nav {
     z-index: 10;
 
     h2 {
+        z-index: 10;
         font-family: "Great Vibes", serif;
         font-size: 2.5rem;
     }
@@ -121,11 +126,29 @@ nav {
         text-decoration: none;
     }
 
-    background-color: $darkify;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+}
+
+.blurtop {
+    position: fixed;
+
+    z-index: 5;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 15vh;
+
+    background-color: transparent;
     backdrop-filter: blur(20px);
 
-    -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent);
-    mask-image: linear-gradient(to bottom, black 40%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 33%, transparent);
+    mask-image: linear-gradient(to bottom, black 33%, transparent);
 }
 
 main {
