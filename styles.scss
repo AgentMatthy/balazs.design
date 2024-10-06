@@ -445,8 +445,8 @@ footer {
 // MOBILE //
 
 @media only screen and (max-width: 600px) {
-    main {
-        background-color: lightblue;
+    #logo {
+        display: none;
     }
 }
 
