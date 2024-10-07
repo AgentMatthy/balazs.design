@@ -263,6 +263,7 @@ main .screen4 p {
 main .screen4 div {
   padding: 0 10vw;
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-template-rows: auto;
   gap: 5vh 5vw;
@@ -298,6 +299,7 @@ footer {
 }
 footer div {
   color: #000;
+  gap: 1rem;
   padding: 50vh 10vw 5vh;
   position: relative;
   display: flex;
@@ -333,9 +335,15 @@ footer div {
   color: #ababab;
 }
 
-@media only screen and (max-width: 600px) {
-  #logo {
+@media screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+  nav .logo {
     display: none;
+  }
+  nav ul {
+    padding-left: 0;
   }
 }
 .fadeup {

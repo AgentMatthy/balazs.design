@@ -354,6 +354,7 @@ main {
             padding: 0 10vw;
 
             display: grid;
+            justify-content: center;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-template-rows: auto;
             gap: 5vh 5vw;
@@ -397,6 +398,8 @@ main {
 footer {
     div {
         color: $c-bg;
+
+        gap: 1rem;
 
         padding: 50vh 10vw 5vh;
         position: relative;
@@ -444,9 +447,17 @@ footer {
 
 // MOBILE //
 
-@media only screen and (max-width: 600px) {
-    #logo {
-        display: none;
+@media screen and (max-width: 600px) {
+    nav {
+        justify-content: center;
+
+        .logo {
+            display: none;
+        }
+
+        ul {
+            padding-left: 0;
+        }
     }
 }
 
