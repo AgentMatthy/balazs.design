@@ -232,6 +232,8 @@ main {
 
                 margin: 0;
 
+                font-family: "Great Vibes", serif;
+
                 text-align: center;
 
                 background-image: url("./textures/nnnoise.svg"),
@@ -247,6 +249,8 @@ main {
 
                 width: 100%;
                 text-align: justify;
+
+                padding: 0 10vw;
             }
         }
     }
@@ -291,7 +295,7 @@ main {
 
                 border-radius: 15px;
                 outline: $c-dis solid 2px;
-                padding: 2vw;
+                padding: clamp(20px, 2vw, 40px);
 
                 h5 {
                     background-image: url("./textures/nnnoise.svg"),
@@ -459,6 +463,16 @@ footer {
             padding-left: 0;
         }
     }
+
+    .screen2 {
+        p {
+            font-size: 1.5rem;
+        }
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
 }
 
 // ANIMATIONS //
@@ -505,12 +519,24 @@ footer {
     animation-delay: 3s;
 }
 
+.anim-delay-3-5 {
+    animation-delay: 3.5s;
+}
+
 .anim-delay-4 {
-    animation-delay: 4s;
+    animation-delay: 3.5s;
+}
+
+.anim-delay-4-5 {
+    animation-delay: 4.5s;
 }
 
 .anim-delay-5 {
-    animation-delay: 5s;
+    animation-delay: 4s;
+}
+
+.anim-delay-6 {
+    animation-delay: 6s;
 }
 
 // KEYFRAMES //

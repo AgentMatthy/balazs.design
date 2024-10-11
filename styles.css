@@ -175,6 +175,7 @@ main .screen2 div h3 {
   font-size: 4rem;
   font-weight: 600;
   margin: 0;
+  font-family: "Great Vibes", serif;
   text-align: center;
   background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
   background-blend-mode: soft-light;
@@ -186,6 +187,7 @@ main .screen2 div p {
   margin: 3rem 0;
   width: 100%;
   text-align: justify;
+  padding: 0 10vw;
 }
 main .screen3 {
   display: flex;
@@ -217,7 +219,7 @@ main .screen3 .cards .card {
   gap: 2rem;
   border-radius: 15px;
   outline: #ababab solid 2px;
-  padding: 2vw;
+  padding: clamp(20px, 2vw, 40px);
 }
 main .screen3 .cards .card h5 {
   background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
@@ -345,6 +347,12 @@ footer div {
   nav ul {
     padding-left: 0;
   }
+  .screen2 p {
+    font-size: 1.5rem;
+  }
+  footer {
+    font-size: 1.5rem;
+  }
 }
 .fadeup {
   animation: fadeup 0.6s cubic-bezier(0.3, 0.8, 0.7, 1) both;
@@ -386,12 +394,24 @@ footer div {
   animation-delay: 3s;
 }
 
+.anim-delay-3-5 {
+  animation-delay: 3.5s;
+}
+
 .anim-delay-4 {
-  animation-delay: 4s;
+  animation-delay: 3.5s;
+}
+
+.anim-delay-4-5 {
+  animation-delay: 4.5s;
 }
 
 .anim-delay-5 {
-  animation-delay: 5s;
+  animation-delay: 4s;
+}
+
+.anim-delay-6 {
+  animation-delay: 6s;
 }
 
 @keyframes fadeup {
