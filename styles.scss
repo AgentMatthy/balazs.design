@@ -81,6 +81,12 @@ nav {
 
     z-index: 10;
 
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
+
     h2 {
         z-index: 10;
         font-family: "Great Vibes", serif;
@@ -125,12 +131,6 @@ nav {
         color: $c-txt;
         text-decoration: none;
     }
-
-    background-color: transparent;
-    backdrop-filter: blur(5px);
-
-    -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent);
-    mask-image: linear-gradient(to bottom, black 60%, transparent);
 }
 
 .blurtop {
@@ -382,7 +382,7 @@ main {
                 grid-row: 1;
                 width: 100%;
 
-                transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+                transition: all 0.3s cubic-bezier(0.13, 1.24, 0.7, 1.34);
 
                 outline: transparent 25px solid;
                 outline-offset: -25px;
@@ -397,9 +397,124 @@ main {
             }
         }
     }
+
+    .screen5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        padding-top: 20vh;
+
+        h2 {
+            font-size: 6rem;
+            font-weight: 600;
+
+            margin: 0;
+            padding: 0 10px;
+
+            font-family: "Great Vibes", serif;
+
+            background-image: url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        button {
+            background: url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+
+            position: relative;
+
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+
+            color: $c-txt;
+            font-size: 2rem;
+            padding: 0;
+            border: none;
+            border-radius: 32rem;
+            cursor: pointer;
+
+            width: 4rem;
+            height: 4rem;
+
+            transition: all 0.3s cubic-bezier(0.13, 1, 0.7, 1);
+
+            outline: transparent 25px solid;
+            outline-offset: -25px;
+            color: transparent;
+
+            &:hover {
+                background: $c-bg;
+                outline: $c-acc 5px solid;
+                outline-offset: 5px;
+                color: $c-acc;
+
+                width: 16rem;
+            }
+
+            svg {
+                position: absolute;
+
+                width: 100%;
+                height: 100%;
+
+                padding: 1rem;
+
+                top: 0;
+                left: 0;
+            }
+
+            p {
+                position: relative;
+                top: 0;
+                left: 0;
+
+                padding: 0 1rem;
+                margin: 0;
+            }
+        }
+
+        .community-half {
+            position: relative;
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            .left {
+                position: relative;
+
+                padding: 0 2rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .right {
+                position: relative;
+
+                padding: 0 4rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
 }
 
 footer {
+    overflow-x: hidden;
+
     div {
         color: $c-bg;
 
@@ -419,8 +534,6 @@ footer {
         left: 0;
         bottom: 0;
     }
-
-    overflow-x: hidden;
 }
 
 .separator {
@@ -478,7 +591,7 @@ footer {
 // ANIMATIONS //
 
 .fadeup {
-    animation: fadeup 0.6s cubic-bezier(0.3, 0.8, 0.7, 1) both;
+    animation: fadeup 0.4s cubic-bezier(0.13, 1.24, 0.7, 1.34) 0.2s both;
 }
 
 .spacein {
@@ -486,11 +599,11 @@ footer {
 }
 
 .fadein {
-    animation: fadein 1.5s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation: fadein 1.5s cubic-bezier(0.19, 1, 0.22, 1) 0.2s both;
 }
 
 .fadeout {
-    animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) both;
+    animation: fadein 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s both;
 }
 
 .separator-left {

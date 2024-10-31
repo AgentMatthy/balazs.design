@@ -54,8 +54,8 @@
         <!-- screen about -->
         <div class="screen2">
             <div>
-                <h3 class="" data-animation="fadeup">About us</h3>
-                <p class="" data-animation="fadein">
+                <h3 data-animation="fadeup">About us</h3>
+                <p data-animation="fadein">
                     We are a premier graphic design team specializing in creating impactful visuals that elevate brands.
                     From stunning logos to dynamic web design,
                     we blend creativity and strategy to deliver unique solutions tailored to your business.
@@ -63,8 +63,8 @@
             </div>
 
             <div>
-                <h3 class="" data-animation="fadeup">Why choose us?</h3>
-                <p class="" data-animation="fadein">
+                <h3 data-animation="fadeup">Why choose us?</h3>
+                <p data-animation="fadein">
                     From captivating video edits to meticulously crafted logos,
                     our comprehensive suite of services caters to every facet of your brand identity.
                     We curate color palettes that resonate, designs that inspire, and a voice that captivates.
@@ -170,11 +170,32 @@
         <div class="screen4">
             <h2 data-animation="fadeup">Get in touch</h2>
             <p data-animation="fadein">We would love to hear from you.</p>
-            <div>
+            <div data-animation="fadein">
                 <a href=""><button>Instagram</button></a>
                 <a href=""><button>Facebook</button></a>
                 <a href=""><button>Youtube</button></a>
                 <a href=""><button>Twitter</button></a>
+            </div>
+        </div>
+
+        <div class="screen5">
+            <div class="community-container">
+                <h2 data-animation="fadeup">Want to see "behind the scenes"?</h2>
+                <div class="community-half">
+                    <div class="left">
+                        <p>Join our community!</p>
+                    </div>
+
+                    <div class="right">
+                        <a href=""><button>
+                            <svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none"
+                                xmlns="http://www.w3.org/2000/svg" color="#000000">
+                                    <path d="M5.5 16C10.5 18.5 13.5 18.5 18.5 16" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 17.5L16.5 19.5C16.5 19.5 20.6713 18.1717 22 16C22 15 22.5301 7.85339 19 5.5C17.5 4.5 15 4 15 4L14 6H12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.52832 17.5L7.52832 19.5C7.52832 19.5 3.35699 18.1717 2.02832 16C2.02832 15 1.49823 7.85339 5.02832 5.5C6.52832 4.5 9.02832 4 9.02832 4L10.0283 6H12.0283" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8.5 14C7.67157 14 7 13.1046 7 12C7 10.8954 7.67157 10 8.5 10C9.32843 10 10 10.8954 10 12C10 13.1046 9.32843 14 8.5 14Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.5 14C14.6716 14 14 13.1046 14 12C14 10.8954 14.6716 10 15.5 10C16.3284 10 17 10.8954 17 12C17 13.1046 16.3284 14 15.5 14Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <p>Discord</p>
+                        </button></a>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -187,31 +208,6 @@
             <p>All rights reserved</p>
         </div>
     </footer>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyCqnOTd3wxjeraHiDEj1-dKqBgGeZuTGwM",
-          authDomain: "balazs-design.firebaseapp.com",
-          databaseURL: "https://balazs-design-default-rtdb.europe-west1.firebasedatabase.app",
-          projectId: "balazs-design",
-          storageBucket: "balazs-design.appspot.com",
-          messagingSenderId: "346060636109",
-          appId: "1:346060636109:web:e81d0332a723b0bd9ace84",
-          measurementId: "G-H46QSWWPQ5"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
 
     <script src="script.js" type="text/JavaScript"></script>
 </body>
