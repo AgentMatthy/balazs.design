@@ -101,28 +101,33 @@ nav {
         li {
             color: $c-txt;
             position: relative;
+            transition: 0.3s ease-out all;
+
+            &:hover > * {
+                scale: 1.1;
+            }
 
             &::after {
                 content: "";
                 position: absolute;
                 height: 2px;
                 background-color: $c-acc;
-                transition: all 0.2s ease-out;
+                transition: 0.3s ease-out all;
 
-                bottom: -10px;
-                left: 50%;
+                bottom: 0px;
+                left: 100%;
                 width: 0;
-                opacity: 0;
+                opacity: 1;
                 filter: blur(5px);
             }
 
             &:hover::after {
-                translate: 0 0;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                opacity: 1;
-                filter: blur(0);
+                animation: hoveranim1 0.3s cubic-bezier(0.13, 1, 0.7, 1)
+                    forwards;
+            }
+
+            &:not(:hover)::after {
+                animation: hoveranim1rev 0.3s cubic-bezier(0.13, 1, 0.7, 1);
             }
         }
     }
@@ -130,6 +135,46 @@ nav {
     a {
         color: $c-txt;
         text-decoration: none;
+    }
+}
+
+@keyframes hoveranim1 {
+    from {
+        translate: 0 0;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    to {
+        translate: 0 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes hoveranim1rev {
+    from {
+        translate: 0 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    to {
+        translate: 0 0;
+        bottom: 0;
+        left: 100%;
+        width: 0;
+        opacity: 1;
+        filter: blur(0);
     }
 }
 

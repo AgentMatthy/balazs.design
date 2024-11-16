@@ -74,32 +74,70 @@ nav ul {
 nav ul li {
   color: #f6f5f4;
   position: relative;
+  transition: 0.3s ease-out all;
+}
+nav ul li:hover > * {
+  scale: 1.1;
 }
 nav ul li::after {
   content: "";
   position: absolute;
   height: 2px;
   background-color: #b3bbc1;
-  transition: all 0.2s ease-out;
-  bottom: -10px;
-  left: 50%;
+  transition: 0.3s ease-out all;
+  bottom: 0px;
+  left: 100%;
   width: 0;
-  opacity: 0;
+  opacity: 1;
   filter: blur(5px);
 }
 nav ul li:hover::after {
-  translate: 0 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  opacity: 1;
-  filter: blur(0);
+  animation: hoveranim1 0.3s cubic-bezier(0.13, 1, 0.7, 1) forwards;
+}
+nav ul li:not(:hover)::after {
+  animation: hoveranim1rev 0.3s cubic-bezier(0.13, 1, 0.7, 1);
 }
 nav a {
   color: #f6f5f4;
   text-decoration: none;
 }
 
+@keyframes hoveranim1 {
+  from {
+    translate: 0 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    translate: 0 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes hoveranim1rev {
+  from {
+    translate: 0 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    translate: 0 0;
+    bottom: 0;
+    left: 100%;
+    width: 0;
+    opacity: 1;
+    filter: blur(0);
+  }
+}
 .blurtop {
   position: fixed;
   z-index: 5;
