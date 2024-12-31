@@ -18,7 +18,7 @@ $title-letter-spacing: 0.2rem;
 }
 
 html {
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scroll-behavior: smooth;
 }
 
@@ -99,7 +99,14 @@ nav {
         list-style: none;
 
         li {
-            color: $c-txt;
+            background-image: url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            // color: $c-txt;
             position: relative;
             transition: 0.3s ease-out all;
 
@@ -300,7 +307,7 @@ main {
         }
     }
 
-    .screen3 {
+    .screen_works {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -321,51 +328,80 @@ main {
             -webkit-text-fill-color: transparent;
         }
 
-        .cards {
-            display: grid;
-            gap: 5vw;
+        img {
+            position: relative;
+            width: 100vw;
+            left: -10vw;
+            overflow-x: hidden;
+        }
+    }
 
+    .screen_get-started {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        gap: 5vh;
+
+        h2 {
+            font-size: 6rem;
+            font-weight: 600;
+
+            margin: 0;
+            padding: 0;
+
+            font-family: "Great Vibes", serif;
+
+            background-image: url("./textures/nnnoise.svg"),
+                linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+            background-blend-mode: soft-light;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            margin: 0 0 10vh;
+            padding: 0;
+        }
+
+        div {
+            padding: 0 10vw;
+
+            display: flex;
+            justify-content: center;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             grid-template-rows: auto;
+            gap: 5vh 5vw;
 
-            position: relative;
+            button {
+                background: url("./textures/nnnoise.svg"),
+                    linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
+                background-blend-mode: soft-light;
 
-            padding: 5vh 0;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
 
-            .card {
-                display: flex;
-                flex-direction: column;
+                color: $c-txt;
+                font-size: 2rem;
+                padding: 1rem 4rem;
+                border: none;
+                border-radius: 32rem;
+                cursor: pointer;
 
-                gap: 2rem;
+                transition: all 0.3s cubic-bezier(0.13, 1.24, 0.7, 1.34);
 
-                border-radius: 15px;
-                outline: $c-dis solid 2px;
-                padding: clamp(20px, 2vw, 40px);
+                outline: transparent 25px solid;
+                outline-offset: -25px;
+                color: $c-bg;
 
-                h5 {
-                    background-image: url("./textures/nnnoise.svg"),
-                        linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
-                    background-blend-mode: soft-light;
-                    -webkit-background-clip: text;
-                    background-clip: text;
-                    -webkit-text-fill-color: transparent;
-
-                    font-family: "Great Vibes", serif;
-                    font-size: 3rem;
-
-                    text-wrap: nowrap;
-
-                    padding: 0;
-                    margin: 0;
-                }
-
-                p {
-                    margin: 0;
-                    padding: 0;
-                }
-
-                span {
-                    font-weight: 600;
+                &:hover {
+                    background: $c-bg;
+                    outline: $c-acc 5px solid;
+                    outline-offset: 5px;
+                    color: $c-acc;
                 }
             }
         }
@@ -376,6 +412,8 @@ main {
         flex-direction: column;
         justify-content: center;
         text-align: center;
+
+        gap: 5vh;
 
         h2 {
             font-size: 6rem;

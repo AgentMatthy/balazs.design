@@ -4,7 +4,7 @@
 }
 
 html {
-  scrollbar-width: thin;
+  scrollbar-width: none;
   scroll-behavior: smooth;
 }
 
@@ -72,7 +72,11 @@ nav ul {
   list-style: none;
 }
 nav ul li {
-  color: #f6f5f4;
+  background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
+  background-blend-mode: soft-light;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: relative;
   transition: 0.3s ease-out all;
 }
@@ -227,12 +231,12 @@ main .screen2 div p {
   text-align: justify;
   padding: 0 10vw;
 }
-main .screen3 {
+main .screen_works {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-main .screen3 h3 {
+main .screen_works h3 {
   font-size: 4rem;
   font-weight: 600;
   margin: 0;
@@ -243,46 +247,72 @@ main .screen3 h3 {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-main .screen3 .cards {
-  display: grid;
-  gap: 5vw;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: auto;
+main .screen_works img {
   position: relative;
-  padding: 5vh 0;
+  width: 100vw;
+  left: -10vw;
+  overflow-x: hidden;
 }
-main .screen3 .cards .card {
+main .screen_get-started {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  border-radius: 15px;
-  outline: #ababab solid 2px;
-  padding: clamp(20px, 2vw, 40px);
+  justify-content: center;
+  text-align: center;
+  gap: 5vh;
 }
-main .screen3 .cards .card h5 {
+main .screen_get-started h2 {
+  font-size: 6rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-family: "Great Vibes", serif;
   background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
   background-blend-mode: soft-light;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "Great Vibes", serif;
-  font-size: 3rem;
-  text-wrap: nowrap;
-  padding: 0;
-  margin: 0;
 }
-main .screen3 .cards .card p {
-  margin: 0;
+main .screen_get-started p {
+  margin: 0 0 10vh;
   padding: 0;
 }
-main .screen3 .cards .card span {
-  font-weight: 600;
+main .screen_get-started div {
+  padding: 0 10vw;
+  display: flex;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  gap: 5vh 5vw;
+}
+main .screen_get-started div button {
+  background: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
+  background-blend-mode: soft-light;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: #f6f5f4;
+  font-size: 2rem;
+  padding: 1rem 4rem;
+  border: none;
+  border-radius: 32rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.13, 1.24, 0.7, 1.34);
+  outline: transparent 25px solid;
+  outline-offset: -25px;
+  color: #000;
+}
+main .screen_get-started div button:hover {
+  background: #000;
+  outline: #b3bbc1 5px solid;
+  outline-offset: 5px;
+  color: #b3bbc1;
 }
 main .screen4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  gap: 5vh;
 }
 main .screen4 h2 {
   font-size: 6rem;

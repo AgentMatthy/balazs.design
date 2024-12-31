@@ -10,12 +10,17 @@ const observer = new IntersectionObserver((entries) => {
       // Add the specified animation class to the element
       if (animationClass) {
         entry.target.classList.add(animationClass);
-      } else {
-        console.warn("No animation class specified for", entry.target);
       }
 
       // Stop observing the target once the animation has started
-      observer.unobserve(entry.target);
+      // observer.unobserve(entry.target);
+    } else {
+      const animationClass = entry.target.dataset.animation;
+      entry.target.style.visibility = "hidden";
+
+      if (animationClass) {
+        entry.target.classList.remove(animationClass);
+      }
     }
   });
 });
