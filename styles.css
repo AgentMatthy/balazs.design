@@ -72,11 +72,14 @@ nav ul {
   list-style: none;
 }
 nav ul li {
-  background-image: url("./textures/nnnoise.svg"), linear-gradient(45deg, #a47e1b, #dba51d 30%, #9e7714);
+  /*
+  background-image: url("./textures/nnnoise.svg"),
+      linear-gradient(45deg, $c-g1, $c-g2 30%, $c-g3);
   background-blend-mode: soft-light;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  */
   position: relative;
   transition: 0.3s ease-out all;
 }
